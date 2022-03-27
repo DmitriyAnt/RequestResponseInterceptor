@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RequestResponseInterceptor</string>
+
+    <string name="base_url">https://jsonplaceholder.typicode.com</string>
+    <string name="db">request_response_db</string>
+
+    <string name="for_search_hint">search for response body</string>
+    <string name="list">List</string>
+</resources>
