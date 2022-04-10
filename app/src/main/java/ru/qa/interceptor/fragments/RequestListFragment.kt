@@ -172,7 +172,7 @@ class RequestListFragment : FragmentBinding(), UiListener {
                 .map { text -> text.lowercase(Locale.getDefault()).trim() }
                 .filter { text -> text.isNotBlank() }
                 .onEach { viewModel.searchBody(it) }
-                .collect()
+                .launchIn(this)
         }
 
     }

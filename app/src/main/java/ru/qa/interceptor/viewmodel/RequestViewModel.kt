@@ -32,7 +32,7 @@ class RequestViewModel : ViewModel() {
             requestRepo.getAllRequest()
                 .onEach {
                     _allReq.value = it
-                }.collect()
+                }.launchIn(this)
         }
     }
 
@@ -57,7 +57,7 @@ class RequestViewModel : ViewModel() {
             withContext(Dispatchers.Main) {
                 _resultFTS.value = it
             }
-        }.collect()
+        }.launchIn(this)
     }
 
     fun select(item: RequestResponse) {
